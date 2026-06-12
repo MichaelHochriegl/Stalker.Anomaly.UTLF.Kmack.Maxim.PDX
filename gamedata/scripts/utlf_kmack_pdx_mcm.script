@@ -1,0 +1,20 @@
+local function default_range()
+    return utlf_kmack_pdx and utlf_kmack_pdx.get_default_range and utlf_kmack_pdx.get_default_range() or 26
+end
+
+local function default_cone_deg()
+    return utlf_kmack_pdx and utlf_kmack_pdx.get_default_cone_deg and utlf_kmack_pdx.get_default_cone_deg() or 24
+end
+
+function on_mcm_load()
+    return {
+        id = "kmack_pdx",
+        sh = true,
+        gr = {
+            { id = "title", type = "desc", clr = { 200, 200, 255, 200 }, text = "ui_mcm_utlf_kmack_pdx_title" },
+            { id = "description", type = "desc", text = "ui_mcm_utlf_kmack_pdx_description" },
+            { id = "range", type = "track", val = 2, min = 5, max = 80, step = 1, def = default_range(), hint = "utlf_kmack_pdx_range" },
+            { id = "cone_deg", type = "track", val = 2, min = 8, max = 60, step = 1, def = default_cone_deg(), hint = "utlf_kmack_pdx_cone_deg" },
+        },
+    }, "utlf"
+end

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+    <string id="ui_mcm_menu_utlf_kmack_pdx">
+        <text>Kmack Maxim PDX</text>
+    </string>
+    <string id="ui_mcm_menu_kmack_pdx">
+        <text>Kmack Maxim PDX</text>
+    </string>
+    <string id="ui_mcm_utlf_kmack_pdx_title">
+        <text>Kmack Maxim PDX</text>
+    </string>
+    <string id="ui_mcm_utlf_kmack_pdx_description">
+        <text>Configure the tactical light profile used by the Kmack Maxim PDX compatibility patch.</text>
+    </string>
+    <string id="ui_mcm_utlf_kmack_pdx_range">
+        <text>Light range</text>
+    </string>
+    <string id="ui_mcm_utlf_kmack_pdx_range_desc">
+        <text>Maximum distance of the scripted weapon light. Higher values reach farther but can be brighter and more expensive.</text>
+    </string>
+    <string id="ui_mcm_utlf_kmack_pdx_cone_deg">
+        <text>Cone angle</text>
+    </string>
+    <string id="ui_mcm_utlf_kmack_pdx_cone_deg_desc">
+        <text>Spotlight cone angle in degrees. Lower values make a tighter beam; higher values make a wider beam.</text>
+    </string>
+</string_table>

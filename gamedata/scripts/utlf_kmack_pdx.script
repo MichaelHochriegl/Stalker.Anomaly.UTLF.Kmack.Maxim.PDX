@@ -1,0 +1,34 @@
+local PACK_NAME = "Kmack Maxim PDX"
+
+local PROFILE = {
+    sections = {
+        "wpn_pdx",
+        "wpn_pdx_terminal",
+        "wpn_pdx_terminal_off",
+    },
+}
+
+local CONFIG = {
+    page = "kmack_pdx",
+    rebuild_reason = "Kmack PDX settings changed",
+    numbers = {
+        range = { def = 26, min = 5, max = 80 },
+        cone_deg = { def = 24, min = 8, max = 60 },
+    },
+}
+
+function get_default_range()
+    return CONFIG.numbers.range.def
+end
+
+function get_default_cone_deg()
+    return CONFIG.numbers.cone_deg.def
+end
+
+function on_game_start()
+    if utlf and utlf.setup_configured_pack then
+        utlf.setup_configured_pack(PACK_NAME, PROFILE, CONFIG)
+    else
+        printf("[utlf_kmack_pdx] compatible framework script not available")
+    end
+end
