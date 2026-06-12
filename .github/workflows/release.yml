@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 env:
-  MOD_NAME: UTFL_Maxim_PDX
+  MOD_NAME: UTLF_Maxim_PDX
 
 jobs:
   upload-archive:
