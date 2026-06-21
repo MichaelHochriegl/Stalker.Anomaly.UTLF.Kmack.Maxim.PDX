@@ -14,6 +14,12 @@ Compatibility patch for `Universal Tactical Light Framework` and `[Kmack] Maxim 
 - `wpn_pdx_terminal`
 - `wpn_pdx_terminal_off`
 
+## Attachment Mode
+
+The PDX profile uses `mode = "built_in"`.
+
+This is intentional: the PDX already has a suitable integrated light setup, so external modular tactical light items are not allowed on these sections. UTLF only uses the scripted light emitter for this patch.
+
 ## MCM
 
 This patch adds a nested page under `Universal Tactical Light Framework` > `Kmack Maxim PDX`.
@@ -25,7 +31,7 @@ Configurable values:
 
 Changing these values re-registers the PDX light profile. If the PDX light is currently active, the framework reattaches it with the new values.
 
-The patch uses `utlf.setup_configured_pack()` with the `kmack_pdx` MCM namespace, so these values are stored separately from other weapon patch mods.
+The patch uses `utlf.setup_builtin_light_pack()` with the `kmack_pdx` MCM namespace, so these values are stored separately from other weapon patch mods.
 
 
 ## Installation

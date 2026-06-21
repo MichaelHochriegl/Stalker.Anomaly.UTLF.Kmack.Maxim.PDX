@@ -1,6 +1,9 @@
 local PACK_NAME = "Kmack Maxim PDX"
 
 local PROFILE = {
+    -- The PDX already has a built-in light model/bone. Do not allow external
+    -- modular flashlight items; use the framework's invisible carrier path.
+    mode = "built_in",
     sections = {
         "wpn_pdx",
         "wpn_pdx_terminal",
@@ -26,8 +29,8 @@ function get_default_cone_deg()
 end
 
 function on_game_start()
-    if utlf and utlf.setup_configured_pack then
-        utlf.setup_configured_pack(PACK_NAME, PROFILE, CONFIG)
+    if utlf and utlf.setup_builtin_light_pack then
+        utlf.setup_builtin_light_pack(PACK_NAME, PROFILE, CONFIG)
     else
         printf("[utlf_kmack_pdx] compatible framework script not available")
     end
